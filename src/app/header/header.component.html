@@ -1,0 +1,97 @@
+<!--Création d'un menu de base avec une condition ternaire au libbeu d'une fonction pour tous-->
+  
+    <!--Condition ternaire pour changer la couleur selon si on selectionne HOME, 
+      normalement il faut faire une fonction // il faut le faire pour 2 libbbutt minimum 
+      sinon ca reste rouge dans le localhost 4200-->
+      <!--On a créé dans le .ts, une variable selectedMenu = 'home'-->
+
+      <!-- si je mets mat-icon-button , le cadre sera rond -->
+       
+      
+
+
+
+       <mat-toolbar role="header" color="primary" fxLayoutAlign="space-between center"> 
+         
+         
+         <button mat-icon-button [matMenuTriggerFor]="menu">  
+            <mat-icon>view_headline</mat-icon> 
+           </button>
+
+           <h1>MON SITE</h1>
+
+
+           <button mat-icon-button [matMenuTriggerFor]="menu">  
+              <mat-icon>view_headline</mat-icon> 
+             </button>
+        </mat-toolbar>
+      
+    
+        <mat-menu #menu="matMenu">
+
+          <!-- <button mat-menu-item [style.color]="appService.selectedMenu == 'home' ?'red' : 'black'"  
+          (click)= "selectMenu('home')"><mat-icon>home</mat-icon>Home</button>
+  
+          <button mat-menu-item [style.color]="appService.selectedMenu == 'skills' ?'red' : 'black'"  
+          (click)= "selectMenu('skills')"><mat-icon>vertical_align_top</mat-icon>Skills</button>
+
+         
+          <button  mat-menu-item [matMenuTriggerFor]="experience" mat-menu-item [style.color]="appService.selectedMenu == 'xp' ?'red' : 'black'"  
+          (click)= "selectMenu('xp')"><mat-icon>usb</mat-icon>Experiences</button>
+          
+
+          <button mat-menu-item [style.color]="appService.selectedMenu == 'contact' ?'red' : 'black'"  
+          (click)= "selectMenu('contact')"><mat-icon>perm_contact_calendar</mat-icon>Contact</button> 
+  
+  
+          <button mat-menu-item [style.color]="appService.selectedMenu == 'contact' ?'red' : 'black'"  
+          (click)= "selectMenu('todo')"><mat-icon>playlist_add_check</mat-icon>ToDo List</button> 
+  
+        </mat-menu> -->
+
+
+        <!--De base c'est commen en haut mais la on va enlever les click et les remplacer par RouterLink =""-->
+        <!-- routerLink existe grace au Routermodule -->
+
+          <button mat-menu-item [style.color]="appService.selectedMenu == 'home' ?'red' : 'black'"  
+          routerLink=""><mat-icon>home</mat-icon>Home</button>
+  
+          <button mat-menu-item [style.color]="appService.selectedMenu == 'skills' ?'red' : 'black'"  
+          routerLink="/skills"><mat-icon>vertical_align_top</mat-icon>Skills</button>
+
+         
+          <button  mat-menu-item [matMenuTriggerFor]="experience" mat-menu-item [style.color]="appService.selectedMenu == 'xp' ?'red' : 'black'"  
+          routerLink="/experience"><mat-icon>usb</mat-icon>Experiences</button>
+          
+
+          <button mat-menu-item [style.color]="appService.selectedMenu == 'contact' ?'red' : 'black'"  
+          routerLink="/contact"><mat-icon>perm_contact_calendar</mat-icon>Contact</button> 
+  
+  
+          <button mat-menu-item [style.color]="appService.selectedMenu == 'contact' ?'red' : 'black'"  
+          routerLink="/todo"><mat-icon>playlist_add_check</mat-icon>ToDo List</button> 
+  
+        </mat-menu>
+
+
+        
+     
+
+        <!--Ici j'ai ajouté un <a href pour l'avoir en lien souligné 
+        // il existe un moyen de ne pas recharger la page quand on click dessus 
+        en ajoutant, après le href (click)="$event.prevent.default"-->
+
+        <!-- <li [style.color]="appService.selectedMenu == 'contact' ?'red' : 'black'"  
+        (click)= "selectMenu('contact')"><a href="" (click)="$event.prevent.default()">Contact</a></li>  -->
+  
+
+    <!-- <mat-menu #experience="matMenu">
+    <button *ngFor="let fruit of listeFruit" (click) = "selectMenu(fruit)" [style.color]="changeColor(fruit)">{{fruit}}</button>
+    </mat-menu> -->
+
+    <mat-menu #experience="matMenu">
+        <button *ngFor="let fruit of listeFruit" routerLink="/experience" [style.color]="changeColor(fruit)">{{fruit}}</button>
+    </mat-menu>
+      
+  
+  

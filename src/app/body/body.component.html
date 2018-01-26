@@ -1,0 +1,46 @@
+<!--Ajout d'un switch pour afficher le texte correspondant au titre dans le menu qui se trouve dans le header-->
+<!-- 
+<ng-container [ngSwitch]="appService.selectedMenu"> 
+       
+    
+   <section *ngSwitchCase="'home'" fxLayoutGap="5em" fxLayout.gt-sm="row">
+    <app-home></app-home>
+   </section>
+
+   <section *ngSwitchCase="'skills'">
+    <app-skills></app-skills>
+   </section>
+
+   <section *ngSwitchCase="'xp'">
+    <app-xp></app-xp>
+   </section>
+
+   <section *ngSwitchCase="'todo'">
+    <app-component-todo-switch></app-component-todo-switch>
+   </section>
+
+   <section *ngSwitchCase="'contact'">
+     <app-contact></app-contact>
+   </section>
+
+   <section *ngSwitchCase="'legal'">
+    <app-legal></app-legal>
+   </section>
+
+   <section *ngSwitchCase="'credit'">
+    <app-credit></app-credit>
+   </section>
+
+ </ng-container>  -->
+
+
+   
+ <router-outlet></router-outlet>
+ <!-- plus besoin du switch -->
+<!--  et en plus, on peut ne plus avoir besoin du body.component.html si on met directement 
+    <router-outlet> dans app.component.html à la place de <app-body></app-body> -->
+        
+      <!--Si j'avais fait un <mat-card> autour de tout le switch au lieu de ttes les section,
+           j'aurai du rajouter des balises <mat-card> ici, autour de <router-outlet>-->  
+    
+  

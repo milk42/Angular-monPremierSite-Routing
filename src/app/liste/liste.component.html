@@ -1,0 +1,11 @@
+
+<div *ngFor="let liste of todoService.listeTodo">
+  <h2>{{liste.id}} {{liste.name}}</h2>
+<button (click)="todoService.supprimerTodo(liste)">Supprimer</button>
+<button (click)="todoService.modifierTodo(liste)">Editer</button>
+<!-- <button (change)="todoService.modifierTodo(liste)" name="{{liste.id}}" value="{{liste.name}}">Editer</button> -->
+
+
+ <!--si edit est faux , ce input existe -->
+<input *ngIf="liste.edit" type="text" (change)="todoService.changeModif(liste, inputText.value)" #inputText>
+</div>

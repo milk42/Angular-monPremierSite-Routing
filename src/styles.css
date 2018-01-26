@@ -1,0 +1,8 @@
+/* type d'icon de google*/
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css"; 
+/* force le reset des navigateur sur les pagging et margin par défault*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");
+
+html, body {
+    height: 100%;
+}
