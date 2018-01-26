@@ -36,7 +36,7 @@ const routes: Routes = [
   {path: 'todo', component: ComponentTodoSwitchComponent},
   {path: 'legal', component: LegalComponent},
   {path: 'credit', component: CreditComponent},
-
+  {path: '**', component: HomeComponent}, // TOUJOURS LE METTRE EN DERNIER  si l'utilisateur tape n'importe quoi, il sera redirigé sur home
 ];
 
 @NgModule({
