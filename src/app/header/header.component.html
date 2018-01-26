@@ -50,26 +50,26 @@
         </mat-menu> -->
 
 
-        <!--De base c'est commen en haut mais la on va enlever les click et les remplacer par RouterLink =""-->
+       
         <!-- routerLink existe grace au Routermodule -->
 
           <button mat-menu-item [style.color]="appService.selectedMenu == 'home' ?'red' : 'black'"  
-          routerLink=""><mat-icon>home</mat-icon>Home</button>
+          (click)= "selectMenu('home')"routerLink=""><mat-icon>home</mat-icon>Home</button>
   
           <button mat-menu-item [style.color]="appService.selectedMenu == 'skills' ?'red' : 'black'"  
-          routerLink="/skills"><mat-icon>vertical_align_top</mat-icon>Skills</button>
+          (click)= "selectMenu('skills')"routerLink="/skills"><mat-icon>vertical_align_top</mat-icon>Skills</button>
 
          
           <button  mat-menu-item [matMenuTriggerFor]="experience" mat-menu-item [style.color]="appService.selectedMenu == 'xp' ?'red' : 'black'"  
-          routerLink="/experience"><mat-icon>usb</mat-icon>Experiences</button>
+          (click)= "selectMenu('xp')"routerLink="/experience"><mat-icon>usb</mat-icon>Experiences</button>
           
 
           <button mat-menu-item [style.color]="appService.selectedMenu == 'contact' ?'red' : 'black'"  
-          routerLink="/contact"><mat-icon>perm_contact_calendar</mat-icon>Contact</button> 
+          (click)= "selectMenu('contact')"routerLink="/contact"><mat-icon>perm_contact_calendar</mat-icon>Contact</button> 
   
   
-          <button mat-menu-item [style.color]="appService.selectedMenu == 'contact' ?'red' : 'black'"  
-          routerLink="/todo"><mat-icon>playlist_add_check</mat-icon>ToDo List</button> 
+          <button mat-menu-item [style.color]="appService.selectedMenu == 'todo' ?'red' : 'black'"  
+          (click)= "selectMenu('todo')" routerLink="/todo"><mat-icon>playlist_add_check</mat-icon>ToDo List</button> 
   
         </mat-menu>
 
